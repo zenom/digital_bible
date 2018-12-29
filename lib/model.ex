@@ -1,3 +1,3 @@
 defmodule DigitalBible.Model.Book do
-  defstruct book_id: nil, chapter_id: nil, chapter_name: nil, dam_id: nil, default: nil
+  defstruct book_id: nil, book_name: nil, book_order: nil, dam_id_root: nil
 end

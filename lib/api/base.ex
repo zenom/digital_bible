@@ -12,7 +12,8 @@ defmodule DigitalBible.Api.Base do
     |> HTTPoison.get([], [
       params: Map.merge(%{
         key: Application.get_env(:digital_bible, :api_key),
-        v: Application.get_env(:digital_bible, :api_version)
+        v: Application.get_env(:digital_bible, :api_version),
+        reply: "json"
       }, params)
     ])
   end
