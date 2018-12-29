@@ -21,15 +21,11 @@ defmodule DigitalBible.Api.Book do
     |> make_models([])
   end
 
-  # acc?
   defp make_models([book|books], acc) do
     new_model = struct(DigitalBible.Model.Book, book)
     make_models(books, [new_model|acc])
   end
-
-  defp make_models([], acc) do
-    Enum.reverse(acc)
-  end
+  defp make_models([], acc), do: Enum.reverse(acc)
 
   defp default_params do
     %{
