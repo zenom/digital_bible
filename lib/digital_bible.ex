@@ -23,7 +23,7 @@ defmodule DigitalBible do
   )
 
   def process_request_url(url) do
-    "https://dbt.io/library" <> url
+    "https://dbt.io" <> url
   end
 
   def process_response_body(body) do
