@@ -23,7 +23,9 @@ defmodule DigitalBible.MixProject do
   defp deps do
     [
       {:poison, "~> 4.0"},
-      {:ex_doc, "~> 0.19.2", only: :dev}
+      {:httpoison, "~> 1.5"},
+      {:ex_doc, "~> 0.19.2", only: :dev},
+      {:mix_test_watch, "~> 0.8", only: :dev, runtime: false}
     ]
   end
 
