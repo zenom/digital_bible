@@ -11,7 +11,7 @@ defmodule DigitalBible.Api.Book do
   Get the list of books
 
   ## EXAMPLES
-    iex> DigitalBible.Api.Book.books
+    iex> DigitalBible.books
     []
   """
   def books(dam_id \\ "ENGNASO") do

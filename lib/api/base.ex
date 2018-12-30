@@ -26,11 +26,11 @@ defmodule DigitalBible.Api.Base do
     |> Enum.map(&string_keys_to_atoms(&1))
   end
 
-  defp parse({:ok, %HTTPoison.Response{status_code: 404}}) do
+  defp parse({:ok, %HTTPoison.Response{status_code: 404}}, _) do
     IO.puts "NOT FOUND"
   end
 
-  defp parse({:error, %HTTPoison.Error{reason: reason}}) do
+  defp parse({:error, %HTTPoison.Error{reason: reason}}, _) do
     IO.puts reason
   end
 
