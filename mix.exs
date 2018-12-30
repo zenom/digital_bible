@@ -8,7 +8,9 @@ defmodule DigitalBible.MixProject do
       elixir: "~> 1.7",
       description: description(),
       package: package(),
-      deps: deps()
+      deps: deps(),
+      test_coverage: [tool: ExCoveralls],
+      preferred_cli_env: ["coveralls": :test, "coveralls.detail": :test, "coveralls.post": :test, "coveralls.html": :test]
     ]
   end
 
@@ -25,7 +27,9 @@ defmodule DigitalBible.MixProject do
       {:poison, "~> 4.0"},
       {:httpoison, "~> 1.5"},
       {:ex_doc, "~> 0.19.2", only: :dev},
-      {:mix_test_watch, "~> 0.8", only: :dev, runtime: false}
+      {:mix_test_watch, "~> 0.8", only: :dev, runtime: false},
+      {:exvcr, "~> 0.10", only: :test},
+      {:excoveralls, "~> 0.10", only: :test}
     ]
   end
 

@@ -1,8 +1,6 @@
 defmodule DigitalBibleTest do
-  use ExUnit.Case
-  doctest DigitalBible
+  #use ExUnit.Case, async: true
+  #use ExVCR.Mock, adapter: ExVCR.Adapter.Hackney
 
-  test "greets the world" do
-    assert DigitalBible.hello() == :world
-  end
+  #doctest DigitalBible
 end
