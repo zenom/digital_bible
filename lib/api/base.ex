@@ -19,6 +19,18 @@ defmodule DigitalBible.Api.Base do
     |> parse(expected_fields)
   end
 
+  # conver to models
+  def convert_to_models({:error, message}, _, _) do
+    IO.puts "Convert to models, with: #{message}"
+  end
+
+  def convert_to_models([item|items], model_name, acc) do
+    new_model = struct(model_name, item)
+    convert_to_models(items, model_name, [new_model|acc])
+  end
+
+  def convert_to_models([], model_name, acc), do: Enum.reverse(acc)
+
   defp parse({:ok, %HTTPoison.Response{status_code: 200, body: body}}, expected_fields) do
     body
     |> Jason.decode!
@@ -28,6 +40,10 @@ defmodule DigitalBible.Api.Base do
 
   defp parse({:ok, %HTTPoison.Response{status_code: 404}}, _) do
     IO.puts "NOT FOUND"
+  end
+
+  defp parse({:ok, %HTTPoison.Response{status_code: status_code}}, _) do
+    {:error, "ERROR: #{status_code}"}
   end
 
   defp parse({:error, %HTTPoison.Error{reason: reason}}, _) do

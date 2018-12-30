@@ -1,11 +1,9 @@
 defmodule DigitalBible.Api.Book do
-  import DigitalBible.Api.Base
+  alias DigitalBible.Api.Base
 
   @expected_fields ~w(
     book_order book_id book_name dam_id_root
   )
-
-  # Parse them into a Model?
 
   @doc """
   Get the list of books
@@ -16,15 +14,9 @@ defmodule DigitalBible.Api.Book do
   """
   def books(dam_id) do
     new_params = Map.merge(default_params(), %{ dam_id: dam_id})
-    request(url(), new_params, @expected_fields)
-    |> make_models([])
+    Base.request(url(), new_params, @expected_fields)
+    |> Base.convert_to_models(DigitalBible.Model.Book, [])
   end
-
-  defp make_models([book|books], acc) do
-    new_model = struct(DigitalBible.Model.Book, book)
-    make_models(books, [new_model|acc])
-  end
-  defp make_models([], acc), do: Enum.reverse(acc)
 
   defp default_params do
     %{ }
