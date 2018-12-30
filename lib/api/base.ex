@@ -19,9 +19,6 @@ defmodule DigitalBible.Api.Base do
     |> parse(expected_fields)
   end
 
-  @doc """
-  Parse the result from the request, when its a valid result
-  """
   defp parse({:ok, %HTTPoison.Response{status_code: 200, body: body}}, expected_fields) do
     body
     |> Jason.decode!
@@ -29,17 +26,11 @@ defmodule DigitalBible.Api.Base do
     |> Enum.map(&string_keys_to_atoms(&1))
   end
 
-  @doc """
-  Parse the result when the result is not found
-  """
-  def parse({:ok, %HTTPoison.Response{status_code: 404}}) do
+  defp parse({:ok, %HTTPoison.Response{status_code: 404}}) do
     IO.puts "NOT FOUND"
   end
 
-  @doc """
-  Parse the result when there is an unknown error
-  """
-  def parse({:error, %HTTPoison.Error{reason: reason}}) do
+  defp parse({:error, %HTTPoison.Error{reason: reason}}) do
     IO.puts reason
   end
 
