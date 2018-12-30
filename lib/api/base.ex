@@ -7,7 +7,7 @@ defmodule DigitalBible.Api.Base do
   Send a request based on passed in params.
   Build a request, put in the api key and then make it
   """
-  def request(url, params) do
+  def request(url, params, expected_fields) do
     base_url() <> url
     |> HTTPoison.get([], [
       params: Map.merge(%{
@@ -16,14 +16,15 @@ defmodule DigitalBible.Api.Base do
         reply: "json"
       }, params)
     ])
+    |> parse(expected_fields)
   end
 
   @doc """
   Parse the result from the request, when its a valid result
   """
-  def parse({:ok, %HTTPoison.Response{status_code: 200, body: body}}, expected_fields) do
+  defp parse({:ok, %HTTPoison.Response{status_code: 200, body: body}}, expected_fields) do
     body
-    |> Poison.decode!
+    |> Jason.decode!
     |> Enum.map(&(Map.take(&1, expected_fields)))
     |> Enum.map(&string_keys_to_atoms(&1))
   end

@@ -6,7 +6,7 @@
       "method": "get",
       "options": [],
       "request_body": "",
-      "url": "https://dbt.io/library/bookorder?dam_id=ENGNASO2ET&key=YOURKEYv=2"
+      "url": "https://dbt.io/library/bookorder?dam_id=ENGNASO2ET&key=3188c9402ac3c065c4da74dcdf8f6f18&reply=json&v=2"
     },
     "response": {
       "binary": false,
@@ -16,14 +16,14 @@
         "Access-Control-Allow-Headers": "X-Requested-With",
         "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
         "Access-Control-Allow-Origin": "*",
-        "Age": "107",
+        "Age": "3474",
         "Cache-Control": "max-age=3600, must-revalidate",
         "Content-Type": "application/json",
-        "Date": "Sun, 30 Dec 2018 21:11:11 GMT",
+        "Date": "Sun, 30 Dec 2018 22:07:18 GMT",
         "Server": "Apache/2.2.29 (Amazon)",
         "Via": "1.1 varnish",
         "X-Powered-By": "PHP/5.3.29",
-        "X-Varnish": "595581742 595575179",
+        "X-Varnish": "595780985 595575179",
         "Content-Length": "3224",
         "Connection": "keep-alive"
       },

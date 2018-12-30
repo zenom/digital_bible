@@ -5,6 +5,6 @@ defmodule DigitalBible do
   Documentation for DigitalBible.
   """
 
-  defdelegate request(url, params), to: DigitalBible.Api.Base
+  defdelegate request(url, params, expected_fields), to: DigitalBible.Api.Base
   defdelegate books(dam_id \\ "ENGNASN"), to: DigitalBible.Api.Book
 end

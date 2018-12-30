@@ -1,6 +1,13 @@
 # DigitalBible
 
-**TODO: Add description**
+Elixir client for the Digital Bible Platform. 
+
+https://www.digitalbibleplatform.com
+
+## Usage
+```elixir
+iex> DigitalBible.books
+```
 
 ## Installation
 

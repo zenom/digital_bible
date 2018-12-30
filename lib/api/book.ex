@@ -16,8 +16,7 @@ defmodule DigitalBible.Api.Book do
   """
   def books(dam_id \\ "ENGNASO") do
     new_params = Map.merge(default_params(), %{ dam_id: dam_id})
-    request(url(), new_params)
-    |> parse(@expected_fields)
+    request(url(), new_params, @expected_fields)
     |> make_models([])
   end
 

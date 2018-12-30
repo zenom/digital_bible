@@ -24,7 +24,7 @@ defmodule DigitalBible.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:poison, "~> 4.0"},
+      {:jason, "~> 1.1"},
       {:httpoison, "~> 1.5"},
       {:ex_doc, "~> 0.19.2", only: :dev},
       {:mix_test_watch, "~> 0.8", only: :dev, runtime: false},
