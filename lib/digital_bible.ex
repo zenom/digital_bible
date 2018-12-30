@@ -6,6 +6,5 @@ defmodule DigitalBible do
   """
 
   defdelegate request(url, params), to: DigitalBible.Api.Base
-
-  defdelegate books(dam_id), to: DigitalBible.Api.Book
+  defdelegate books(dam_id \\ "ENGNASN"), to: DigitalBible.Api.Book
 end
