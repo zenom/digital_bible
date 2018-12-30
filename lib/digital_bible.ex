@@ -5,6 +5,12 @@ defmodule DigitalBible do
   Documentation for DigitalBible.
   """
 
-  defdelegate request(url, params, expected_fields), to: DigitalBible.Api.Base
+
+  @doc """
+  Get a list of all the books for a particular dam_id (default: ENGNASN)
+  """
   defdelegate books(dam_id \\ "ENGNASN"), to: DigitalBible.Api.Book
+
+  # should not even really be accessible to people.....
+  defdelegate request(url, params, expected_fields), to: DigitalBible.Api.Base
 end

@@ -14,7 +14,7 @@ defmodule DigitalBible.Api.Book do
     iex> DigitalBible.books
     []
   """
-  def books(dam_id \\ "ENGNASO") do
+  def books(dam_id) do
     new_params = Map.merge(default_params(), %{ dam_id: dam_id})
     request(url(), new_params, @expected_fields)
     |> make_models([])
@@ -27,9 +27,7 @@ defmodule DigitalBible.Api.Book do
   defp make_models([], acc), do: Enum.reverse(acc)
 
   defp default_params do
-    %{
-      dam_id: "ENGNASO2ET"
-    }
+    %{ }
   end
 
   defp url do
