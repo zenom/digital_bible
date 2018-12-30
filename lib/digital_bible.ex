@@ -9,7 +9,7 @@ defmodule DigitalBible do
   @doc """
   Get a list of all the books for a particular dam_id (default: ENGNASN)
   """
-  defdelegate books(dam_id \\ "ENGNASN"), to: DigitalBible.Api.Book
+  defdelegate books(options \\ %{}), to: DigitalBible.Api.Book
 
   @doc """
   List of volumes available on the platform

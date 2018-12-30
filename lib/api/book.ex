@@ -12,14 +12,14 @@ defmodule DigitalBible.Api.Book do
     iex> DigitalBible.books
     []
   """
-  def books(dam_id) do
-    new_params = Map.merge(default_params(), %{ dam_id: dam_id})
+  def books(options \\ %{}) do
+    new_params = Map.merge(default_params(), options)
     Base.request(url(), new_params, @expected_fields)
     |> Base.convert_to_models(DigitalBible.Model.Book, [])
   end
 
   defp default_params do
-    %{ }
+    %{}
   end
 
   defp url do

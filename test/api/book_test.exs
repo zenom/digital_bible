@@ -6,7 +6,7 @@ defmodule DigitalBibleBookTest do
     ExVCR.Config.filter_sensitive_data("key=.+&", "key=YOURKEY")
     HTTPoison.start
     use_cassette "book_list" do
-      result = DigitalBible.books("ENGNASN")
+      result = DigitalBible.books(%{dam_id: "ENGNASN"})
       { :ok, book_list: result }
     end
   end
