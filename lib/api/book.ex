@@ -3,7 +3,7 @@ defmodule DigitalBible.Api.Book do
   alias DigitalBible.Model
 
   @expected_fields ~w(
-    book_order book_id book_name dam_id_root
+    dam_id book_id book_name book_order number_of_chapters chapters
   )
 
   @doc """
@@ -39,6 +39,6 @@ defmodule DigitalBible.Api.Book do
   end
 
   defp url do
-    "/library/bookorder"
+    "/library/book"
   end
 end
