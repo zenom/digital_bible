@@ -1,0 +1,34 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://dbt.io/library/bookorder?key=3188c9402ac3c065c4da74dcdf8f6f18&reply=json&v=2"
+    },
+    "response": {
+      "binary": false,
+      "body": "[{\"Title\":\"Resource Invalid (improperly formatted request)\"},{\"Error\":[\"Missing or invalid DAM ID\"]}]",
+      "headers": {
+        "Accept-Ranges": "bytes",
+        "Access-Control-Allow-Headers": "X-Requested-With",
+        "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+        "Access-Control-Allow-Origin": "*",
+        "Age": "0",
+        "Cache-Control": "max-age=3600, must-revalidate",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Date": "Wed, 02 Jan 2019 02:38:49 GMT",
+        "Server": "Apache/2.2.29 (Amazon)",
+        "Via": "1.1 varnish",
+        "X-Powered-By": "PHP/5.3.29",
+        "X-Varnish": "2701498145",
+        "Content-Length": "101",
+        "Connection": "keep-alive"
+      },
+      "status_code": 400,
+      "type": "ok"
+    }
+  }
+]

@@ -21,7 +21,7 @@ defmodule DigitalBible.Api.Base do
 
   # conver to models
   def convert_to_models({:error, message}, _, _) do
-    IO.puts "Convert to models, with: #{message}"
+    {:error, "Convert to models failed, with: #{message}"}
   end
 
   def convert_to_models([item|items], model_name, acc) do
@@ -29,7 +29,7 @@ defmodule DigitalBible.Api.Base do
     convert_to_models(items, model_name, [new_model|acc])
   end
 
-  def convert_to_models([], model_name, acc), do: Enum.reverse(acc)
+  def convert_to_models([], _, acc), do: Enum.reverse(acc)
 
   defp parse({:ok, %HTTPoison.Response{status_code: 200, body: body}}, expected_fields) do
     body
@@ -39,7 +39,7 @@ defmodule DigitalBible.Api.Base do
   end
 
   defp parse({:ok, %HTTPoison.Response{status_code: 404}}, _) do
-    IO.puts "NOT FOUND"
+    {:error, "NOT FOUND"}
   end
 
   defp parse({:ok, %HTTPoison.Response{status_code: status_code}}, _) do

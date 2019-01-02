@@ -7,6 +7,32 @@ defmodule DigitalBibleBaseTest do
     HTTPoison.start
   end
 
+  describe "convert_to_models" do
+    test "puts a message" do
+      sample ={:error, "This is a test"}
+      assert DigitalBible.Api.Base.convert_to_models(sample, "", "") ==
+        {:error, "Convert to models failed, with: This is a test"}
+    end
+  end
+
+  describe "parse not found" do
+    test "it returns NOT FOUND" do
+      use_cassette "not_found_request" do
+        assert DigitalBible.request("/library/bad_url", %{}, []) ==
+          {:error, "NOT FOUND"}
+      end
+    end
+  end
+
+  describe "parse unknown status code" do
+    test "it returns message" do
+      use_cassette "unknown_request" do
+        assert DigitalBible.request("/library/bookorder", %{}, []) ==
+          {:error, "ERROR: 400"}
+      end
+    end
+  end
+
   test "base request" do
     params = %{
       dam_id: "ENGNASO2ET"
