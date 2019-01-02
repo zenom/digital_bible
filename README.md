@@ -6,7 +6,15 @@ https://www.digitalbibleplatform.com
 
 ## Usage
 ```elixir
-iex> DigitalBible.books
+iex> volumes = DigitalBible.volumes(%{language_code: "ENG", version_code: "NAS"})
+iex> [%DigitalBible.Model.Volume{}, %DigitalBible.Model.Volume{}]
+```
+Now take the result and get the books for the volume:
+
+```elixir
+iex> first_volume = List.first(volumes)
+iex> DigitalBible.books(first_volume)
+iex> [%DigitalBible.Model.Book{}, ...]
 ```
 
 ## Installation
