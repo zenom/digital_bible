@@ -16,7 +16,7 @@ script:
   - MIX_ENV=docs mix do deps.get
   - MIX_ENV=test mix do deps.get, coveralls.travis
 
-matrix:
-  exclude:
-  - elixir: 1.6.0
-    otp_release: 18.3
+# matrix:
+#   exclude:
+#   - elixir: 1.6.0
+#     otp_release: 18.3

@@ -7,17 +7,20 @@ defmodule DigitalBible.Api.Volume do
     delivery version_code
   )
 
+  @default_params %{
+    status: "live",
+    expired: "false"
+  }
+
   def volumes(options \\ %{}) do
-    new_params = Map.merge(default_params(), options)
-    Base.request(url(), new_params, @expected_fields)
-    |> Base.convert_to_models(DigitalBible.Model.Volume, [])
+    @default_params
+    |> Map.merge(options)
+    |> make_request
   end
 
-  defp default_params do
-    %{
-      status: "live",
-      expired: "false"
-    }
+  defp make_request(params) do
+    Base.request(url(), params, @expected_fields)
+    |> Base.convert_to_models(DigitalBible.Model.Volume, [])
   end
 
   defp url do
