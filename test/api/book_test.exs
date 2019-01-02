@@ -35,7 +35,7 @@ defmodule DigitalBibleBookTest do
     HTTPoison.start
     use_cassette "book_list" do
       result = DigitalBible.books(%{dam_id: "ENGNASN2ET"})
-      { :ok, book_list: result }
+      {:ok, book_list: result}
     end
   end
 
@@ -45,7 +45,7 @@ defmodule DigitalBibleBookTest do
     HTTPoison.start
     use_cassette "book_list_with_volume" do
       result = DigitalBible.books(volume)
-      { :ok, book_list: result }
+      {:ok, book_list: result}
     end
   end
 end

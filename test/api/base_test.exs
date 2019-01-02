@@ -9,7 +9,7 @@ defmodule DigitalBibleBaseTest do
 
   describe "convert_to_models" do
     test "puts a message" do
-      sample ={:error, "This is a test"}
+      sample = {:error, "This is a test"}
       assert DigitalBible.Api.Base.convert_to_models(sample, "", "") ==
         {:error, "Convert to models failed, with: This is a test"}
     end

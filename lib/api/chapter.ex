@@ -1,4 +1,7 @@
 defmodule DigitalBible.Api.Chapter do
+  @moduledoc """
+  Lookup chapter information from the Digital Bible Platform
+  """
   alias DigitalBible.Api.Base
   alias DigitalBible.Model
 
@@ -10,7 +13,7 @@ defmodule DigitalBible.Api.Chapter do
 
   def chapters(%Model.Book{dam_id: dam_id, book_id: book_id}) do
     @default_params
-    |> Map.merge( %{ dam_id: dam_id, book_id: book_id })
+    |> Map.merge(%{dam_id: dam_id, book_id: book_id})
     |> make_request
   end
 
@@ -21,7 +24,8 @@ defmodule DigitalBible.Api.Chapter do
   end
 
   defp make_request(params) do
-    Base.request(url(), params, @expected_fields)
+    url()
+    |> Base.request(params, @expected_fields)
     |> Base.convert_to_models(DigitalBible.Model.Chapter, [])
   end
 

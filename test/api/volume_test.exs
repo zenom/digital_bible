@@ -7,7 +7,7 @@ defmodule DigitalBibleVolumeTest do
     HTTPoison.start
     use_cassette "volume_list" do
       result = DigitalBible.volumes
-      { :ok, volume_list: result }
+      {:ok, volume_list: result}
     end
   end
 

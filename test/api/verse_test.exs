@@ -3,7 +3,7 @@ defmodule DigitalBibleVerseTest do
   use ExVCR.Mock, adapter: ExVCR.Adapter.Hackney
 
   describe "Default query" do
-    setup [ :build_default_list ]
+    setup [:build_default_list]
 
     test "verse list count is correct", state do
       assert Enum.count(state[:verse_list]) == 31
@@ -18,7 +18,7 @@ defmodule DigitalBibleVerseTest do
   end
 
   describe "When passing a chapter model" do
-    setup [ :build_list_with_model ]
+    setup [:build_list_with_model]
     test "it makes Verse models", state do
       first_result = List.first(state[:verse_list])
       assert first_result == %DigitalBible.Model.Verse{
@@ -32,17 +32,17 @@ defmodule DigitalBibleVerseTest do
     HTTPoison.start
     use_cassette "verse_list" do
       result = DigitalBible.verses(%{dam_id: "ENGNASO2ET", book_id: "Gen"})
-      { :ok, verse_list: result }
+      {:ok, verse_list: result}
     end
   end
 
   def build_list_with_model(_) do
-    chapter = %DigitalBible.Model.Chapter{ dam_id: "ENGNASN2ET", book_id: "Matt", chapter_id: "3" }
+    chapter = %DigitalBible.Model.Chapter{dam_id: "ENGNASN2ET", book_id: "Matt", chapter_id: "3"}
     ExVCR.Config.filter_sensitive_data("key=.+&", "key=YOURKEY")
     HTTPoison.start
     use_cassette "verse_list_with_model" do
       result = DigitalBible.verse(chapter)
-      { :ok, verse_list: result }
+      {:ok, verse_list: result}
     end
   end
 end

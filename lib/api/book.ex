@@ -1,4 +1,7 @@
 defmodule DigitalBible.Api.Book do
+  @moduledoc """
+  Lookup books based on a dam_id, from the Digital Bible Platform
+  """
   alias DigitalBible.Api.Base
   alias DigitalBible.Model
 
@@ -36,7 +39,8 @@ defmodule DigitalBible.Api.Book do
   end
 
   defp make_request(params) do
-    Base.request(url(), params, @expected_fields)
+    url()
+    |> Base.request(params, @expected_fields)
     |> Base.convert_to_models(DigitalBible.Model.Book, [])
   end
 

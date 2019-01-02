@@ -1,4 +1,7 @@
 defmodule DigitalBible.Api.Verse do
+  @moduledoc """
+  Get verse text and details for a particular volume, book & chapter
+  """
   alias DigitalBible.Api.Base
   alias DigitalBible.Model
 
@@ -10,7 +13,7 @@ defmodule DigitalBible.Api.Verse do
 
   def verse(%Model.Chapter{dam_id: dam_id, book_id: book_id, chapter_id: chapter_id}) do
     @default_params
-    |> Map.merge(%{ dam_id: dam_id, book_id: book_id, chapter_id: chapter_id })
+    |> Map.merge(%{dam_id: dam_id, book_id: book_id, chapter_id: chapter_id})
     |> make_request
   end
 
@@ -21,7 +24,8 @@ defmodule DigitalBible.Api.Verse do
   end
 
   defp make_request(params) do
-    Base.request(url(), params, @expected_fields)
+    url()
+    |> Base.request(params, @expected_fields)
     |> Base.convert_to_models(DigitalBible.Model.Verse, [])
   end
 

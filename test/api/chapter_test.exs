@@ -29,7 +29,7 @@ defmodule DigitalBibleChapterTest do
     HTTPoison.start
     use_cassette "chapter_list" do
       result = DigitalBible.chapters(%{dam_id: "ENGNASO2ET", book_id: "Gen"})
-      { :ok, chapter_list: result }
+      {:ok, chapter_list: result}
     end
   end
 
@@ -39,7 +39,7 @@ defmodule DigitalBibleChapterTest do
     HTTPoison.start
     use_cassette "chapter_list_with_book" do
       result = DigitalBible.chapters(book)
-      { :ok, chapter_list: result }
+      {:ok, chapter_list: result}
     end
   end
 end
