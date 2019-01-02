@@ -6,6 +6,11 @@ defmodule DigitalBible.Model.Chapter do
   defstruct dam_id: nil, book_id: nil, chapter_id: nil, chapter_name: nil
 end
 
+defmodule DigitalBible.Model.Verse do
+  defstruct book_name: nil, book_id: nil, book_order: nil, chapter_id: nil, chapter_title: nil,
+    verse_id: nil, verse_text: nil, paragraph_number: nil
+end
+
 defmodule DigitalBible.Model.Volume do
   defstruct dam_id: nil, volume_name: nil, version_name: nil, media: nil,
     media_type: nil, updated_on: nil, collection_name: nil, status: nil,

@@ -19,6 +19,8 @@ defmodule DigitalBible do
 
   defdelegate chapters(options \\ %{}), to: DigitalBible.Api.Chapter
 
+  defdelegate verses(options \\ %{}), to: DigitalBible.Api.Verse
+
   # should not even really be accessible to people.....
   defdelegate request(url, params, expected_fields), to: DigitalBible.Api.Base
 end

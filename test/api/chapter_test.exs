@@ -12,7 +12,13 @@ defmodule DigitalBibleChapterTest do
   end
 
   test "chapter list count is correct", state do
-    IO.inspect state[:chapter_list]
     assert Enum.count(state[:chapter_list]) == 50
+  end
+
+  test "it makes Chapter models", state do
+    first_result = List.first(state[:chapter_list])
+    assert first_result == %DigitalBible.Model.Chapter{
+      book_id: "Gen", chapter_id: "1", chapter_name: "Chapter 1", dam_id: "ENGNASO2ET"
+    }
   end
 end
