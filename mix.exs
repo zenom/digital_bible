@@ -5,7 +5,8 @@ defmodule DigitalBible.MixProject do
     [
       app: :digital_bible,
       version: "0.1.0",
-      elixir: "~> 1.7",
+      # elixir: "~> 1.7",
+      elixir: ">= 1.4.5",
       description: description(),
       package: package(),
       deps: deps(),
