@@ -6,17 +6,26 @@ defmodule DigitalBible.Api.Chapter do
     dam_id book_id chapter_id chapter_name
   )
 
-  # def chapters(%Model.Book{dam_id: dam_id, book_id: book_id, chapter_id: chapter_id}) do
-  # end
-
-  # def chapters(%Model.Book{dam_id: dam_id, book_id: book_id}) do
-  # end
+  def chapters(%Model.Book{dam_id: dam_id, book_id: book_id}) do
+    new_params = Map.merge(default_params(),
+     %{
+       dam_id: dam_id,
+       book_id: book_id
+     }
+    )
+    make_request(new_params)
+  end
 
   def chapters(options) do
     new_params = Map.merge(default_params(), options)
-    Base.request(url(), new_params, @expected_fields)
+    make_request(new_params)
+  end
+
+  defp make_request(params) do
+    Base.request(url(), params, @expected_fields)
     |> Base.convert_to_models(DigitalBible.Model.Chapter, [])
   end
+
 
   # dam_id, @book_id
   defp default_params do

@@ -1,0 +1,34 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://dbt.io/library/chapter?book_id=Matt&dam_id=ENGNASN2ET&key=YOURKEYv=2"
+    },
+    "response": {
+      "binary": false,
+      "body": "[{\"dam_id\":\"ENGNASN2ET\",\"book_id\":\"Matt\",\"chapter_id\":\"1\",\"chapter_name\":\"Chapter 1\",\"default\":\"\"},{\"dam_id\":\"ENGNASN2ET\",\"book_id\":\"Matt\",\"chapter_id\":\"2\",\"chapter_name\":\"Chapter 2\",\"default\":\"\"},{\"dam_id\":\"ENGNASN2ET\",\"book_id\":\"Matt\",\"chapter_id\":\"3\",\"chapter_name\":\"Chapter 3\",\"default\":\"\"},{\"dam_id\":\"ENGNASN2ET\",\"book_id\":\"Matt\",\"chapter_id\":\"4\",\"chapter_name\":\"Chapter 4\",\"default\":\"\"},{\"dam_id\":\"ENGNASN2ET\",\"book_id\":\"Matt\",\"chapter_id\":\"5\",\"chapter_name\":\"Chapter 5\",\"default\":\"\"},{\"dam_id\":\"ENGNASN2ET\",\"book_id\":\"Matt\",\"chapter_id\":\"6\",\"chapter_name\":\"Chapter 6\",\"default\":\"\"},{\"dam_id\":\"ENGNASN2ET\",\"book_id\":\"Matt\",\"chapter_id\":\"7\",\"chapter_name\":\"Chapter 7\",\"default\":\"\"},{\"dam_id\":\"ENGNASN2ET\",\"book_id\":\"Matt\",\"chapter_id\":\"8\",\"chapter_name\":\"Chapter 8\",\"default\":\"\"},{\"dam_id\":\"ENGNASN2ET\",\"book_id\":\"Matt\",\"chapter_id\":\"9\",\"chapter_name\":\"Chapter 9\",\"default\":\"\"},{\"dam_id\":\"ENGNASN2ET\",\"book_id\":\"Matt\",\"chapter_id\":\"10\",\"chapter_name\":\"Chapter 10\",\"default\":\"\"},{\"dam_id\":\"ENGNASN2ET\",\"book_id\":\"Matt\",\"chapter_id\":\"11\",\"chapter_name\":\"Chapter 11\",\"default\":\"\"},{\"dam_id\":\"ENGNASN2ET\",\"book_id\":\"Matt\",\"chapter_id\":\"12\",\"chapter_name\":\"Chapter 12\",\"default\":\"\"},{\"dam_id\":\"ENGNASN2ET\",\"book_id\":\"Matt\",\"chapter_id\":\"13\",\"chapter_name\":\"Chapter 13\",\"default\":\"\"},{\"dam_id\":\"ENGNASN2ET\",\"book_id\":\"Matt\",\"chapter_id\":\"14\",\"chapter_name\":\"Chapter 14\",\"default\":\"\"},{\"dam_id\":\"ENGNASN2ET\",\"book_id\":\"Matt\",\"chapter_id\":\"15\",\"chapter_name\":\"Chapter 15\",\"default\":\"\"},{\"dam_id\":\"ENGNASN2ET\",\"book_id\":\"Matt\",\"chapter_id\":\"16\",\"chapter_name\":\"Chapter 16\",\"default\":\"\"},{\"dam_id\":\"ENGNASN2ET\",\"book_id\":\"Matt\",\"chapter_id\":\"17\",\"chapter_name\":\"Chapter 17\",\"default\":\"\"},{\"dam_id\":\"ENGNASN2ET\",\"book_id\":\"Matt\",\"chapter_id\":\"18\",\"chapter_name\":\"Chapter 18\",\"default\":\"\"},{\"dam_id\":\"ENGNASN2ET\",\"book_id\":\"Matt\",\"chapter_id\":\"19\",\"chapter_name\":\"Chapter 19\",\"default\":\"\"},{\"dam_id\":\"ENGNASN2ET\",\"book_id\":\"Matt\",\"chapter_id\":\"20\",\"chapter_name\":\"Chapter 20\",\"default\":\"\"},{\"dam_id\":\"ENGNASN2ET\",\"book_id\":\"Matt\",\"chapter_id\":\"21\",\"chapter_name\":\"Chapter 21\",\"default\":\"\"},{\"dam_id\":\"ENGNASN2ET\",\"book_id\":\"Matt\",\"chapter_id\":\"22\",\"chapter_name\":\"Chapter 22\",\"default\":\"\"},{\"dam_id\":\"ENGNASN2ET\",\"book_id\":\"Matt\",\"chapter_id\":\"23\",\"chapter_name\":\"Chapter 23\",\"default\":\"\"},{\"dam_id\":\"ENGNASN2ET\",\"book_id\":\"Matt\",\"chapter_id\":\"24\",\"chapter_name\":\"Chapter 24\",\"default\":\"\"},{\"dam_id\":\"ENGNASN2ET\",\"book_id\":\"Matt\",\"chapter_id\":\"25\",\"chapter_name\":\"Chapter 25\",\"default\":\"\"},{\"dam_id\":\"ENGNASN2ET\",\"book_id\":\"Matt\",\"chapter_id\":\"26\",\"chapter_name\":\"Chapter 26\",\"default\":\"\"},{\"dam_id\":\"ENGNASN2ET\",\"book_id\":\"Matt\",\"chapter_id\":\"27\",\"chapter_name\":\"Chapter 27\",\"default\":\"\"},{\"dam_id\":\"ENGNASN2ET\",\"book_id\":\"Matt\",\"chapter_id\":\"28\",\"chapter_name\":\"Chapter 28\",\"default\":\"\"}]",
+      "headers": {
+        "Accept-Ranges": "bytes",
+        "Access-Control-Allow-Headers": "X-Requested-With",
+        "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+        "Access-Control-Allow-Origin": "*",
+        "Age": "0",
+        "Cache-Control": "max-age=3600, must-revalidate",
+        "Content-Type": "application/json",
+        "Date": "Wed, 02 Jan 2019 01:28:23 GMT",
+        "Server": "Apache/2.2.29 (Amazon)",
+        "Via": "1.1 varnish",
+        "X-Powered-By": "PHP/5.3.29",
+        "X-Varnish": "2701242620",
+        "Content-Length": "2783",
+        "Connection": "keep-alive"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

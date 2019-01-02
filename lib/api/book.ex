@@ -16,8 +16,7 @@ defmodule DigitalBible.Api.Book do
 
   def books(%Model.Volume{dam_id: dam_id}) do
     new_params = Map.merge(default_params(), %{dam_id: dam_id})
-    Base.request(url(), new_params, @expected_fields)
-    |> Base.convert_to_models(DigitalBible.Model.Book, [])
+    make_request(new_params)
   end
 
   @doc """
@@ -29,10 +28,13 @@ defmodule DigitalBible.Api.Book do
   """
   def books(options) do
     new_params = Map.merge(default_params(), options)
-    Base.request(url(), new_params, @expected_fields)
-    |> Base.convert_to_models(DigitalBible.Model.Book, [])
+    make_request(new_params)
   end
 
+  defp make_request(params) do
+    Base.request(url(), params, @expected_fields)
+    |> Base.convert_to_models(DigitalBible.Model.Book, [])
+  end
 
   defp default_params do
     %{}
