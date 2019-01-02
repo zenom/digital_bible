@@ -1,5 +1,7 @@
 # DigitalBible
 
+[![Coverage Status](https://coveralls.io/repos/github/zenom/digital_bible/badge.svg?branch=master)](https://coveralls.io/github/zenom/digital_bible?branch=master)
+
 Elixir client for the Digital Bible Platform. 
 
 https://www.digitalbibleplatform.com
