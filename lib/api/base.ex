@@ -5,8 +5,8 @@ defmodule DigitalBible.Api.Base do
 
   @doc false
   def request(url, params, expected_fields) do
-    (base_url() <> url)
-    |> HTTPoison.get([],
+    client()
+    |> Tesla.get(base_url() <> url,
       params:
         Map.merge(
           %{
@@ -34,18 +34,17 @@ defmodule DigitalBible.Api.Base do
   @doc false
   def convert_to_models([], _, acc), do: Enum.reverse(acc)
 
-  defp parse({:ok, %HTTPoison.Response{status_code: 200, body: body}}, expected_fields) do
-    body
-    |> Jason.decode!()
+  defp parse({:ok, %Tesla.Env{status: 200} = response}, expected_fields) do
+    response.body
     |> Enum.map(&Map.take(&1, expected_fields))
     |> Enum.map(&string_keys_to_atoms(&1))
   end
 
-  defp parse({:ok, %HTTPoison.Response{status_code: 404}}, _) do
+  defp parse({:ok, %Tesla.Env{status: 404}}, _) do
     {:error, "NOT FOUND"}
   end
 
-  defp parse({:ok, %HTTPoison.Response{status_code: status_code}}, _) do
+  defp parse({:ok, %Tesla.Env{status: status_code}}, _) do
     {:error, "ERROR: #{status_code}"}
   end
 
@@ -61,5 +60,13 @@ defmodule DigitalBible.Api.Base do
 
   defp base_url do
     "https://dbt.io"
+  end
+
+  defp client do
+    middleware = [
+      {Tesla.Middleware.BaseUrl, base_url()},
+      Tesla.Middleware.JSON
+    ]
+    Tesla.client(middleware)
   end
 end

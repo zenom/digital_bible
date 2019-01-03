@@ -6,28 +6,28 @@
       "method": "get",
       "options": [],
       "request_body": "",
-      "url": "https://dbt.io/text/verse?book_id=Matt&chapter_id=3&dam_id=ENGNASN2ET&key=YOURKEYverse_id=1"
+      "url": "https://dbt.io/text/verse"
     },
     "response": {
       "binary": false,
-      "body": "[{\"book_name\":\"Matthew\",\"book_id\":\"Matt\",\"book_order\":\"55\",\"chapter_id\":\"3\",\"chapter_title\":\"Chapter 3\",\"verse_id\":\"1\",\"verse_text\":\"Now in those days John the Baptist came, preaching in the wilderness of Judea, saying, \\n\\t\\t\\t\",\"paragraph_number\":\"3\"},{\"book_name\":\"Matthew\",\"book_id\":\"Matt\",\"book_order\":\"55\",\"chapter_id\":\"3\",\"chapter_title\":\"Chapter 3\",\"verse_id\":\"2\",\"verse_text\":\"``Repent, for the kingdom of heaven is at hand.\\\" \\n\\t\\t\\t\",\"paragraph_number\":\"3\"},{\"book_name\":\"Matthew\",\"book_id\":\"Matt\",\"book_order\":\"55\",\"chapter_id\":\"3\",\"chapter_title\":\"Chapter 3\",\"verse_id\":\"3\",\"verse_text\":\"For this is the one referred to by Isaiah the prophet when he said, ``THE VOICE OF ONE CRYING IN THE WILDERNESS, `MAKE READY THE WAY OF THE LORD, MAKE HIS PATHS STRAIGHT!'\\\" \\n\\t\\t\\t\",\"paragraph_number\":\"3\"},{\"book_name\":\"Matthew\",\"book_id\":\"Matt\",\"book_order\":\"55\",\"chapter_id\":\"3\",\"chapter_title\":\"Chapter 3\",\"verse_id\":\"4\",\"verse_text\":\"Now John himself had a garment of camel's hair and a leather belt around his waist; and his food was locusts and wild honey. \\n\\t\\t\\t\",\"paragraph_number\":\"3\"},{\"book_name\":\"Matthew\",\"book_id\":\"Matt\",\"book_order\":\"55\",\"chapter_id\":\"3\",\"chapter_title\":\"Chapter 3\",\"verse_id\":\"5\",\"verse_text\":\"Then Jerusalem was going out to him, and all Judea and all the district around the Jordan; \\n\\t\\t\\t\",\"paragraph_number\":\"3\"},{\"book_name\":\"Matthew\",\"book_id\":\"Matt\",\"book_order\":\"55\",\"chapter_id\":\"3\",\"chapter_title\":\"Chapter 3\",\"verse_id\":\"6\",\"verse_text\":\"and they were being baptized by him in the Jordan River, as they confessed their sins. \\n\\t\\t\\t\",\"paragraph_number\":\"3\"},{\"book_name\":\"Matthew\",\"book_id\":\"Matt\",\"book_order\":\"55\",\"chapter_id\":\"3\",\"chapter_title\":\"Chapter 3\",\"verse_id\":\"7\",\"verse_text\":\"But when he saw many of the Pharisees and Sadducees coming for baptism, he said to them, ``You brood of vipers, who warned you to flee from the wrath to come? \\n\\t\\t\\t\",\"paragraph_number\":\"3\"},{\"book_name\":\"Matthew\",\"book_id\":\"Matt\",\"book_order\":\"55\",\"chapter_id\":\"3\",\"chapter_title\":\"Chapter 3\",\"verse_id\":\"8\",\"verse_text\":\"``Therefore bear fruit in keeping with repentance; \\n\\t\\t\\t\",\"paragraph_number\":\"3\"},{\"book_name\":\"Matthew\",\"book_id\":\"Matt\",\"book_order\":\"55\",\"chapter_id\":\"3\",\"chapter_title\":\"Chapter 3\",\"verse_id\":\"9\",\"verse_text\":\"and do not suppose that you can say to yourselves, `We have Abraham for our father'; for I say to you that from these stones God is able to raise up children to Abraham. \\n\\t\\t\\t\",\"paragraph_number\":\"3\"},{\"book_name\":\"Matthew\",\"book_id\":\"Matt\",\"book_order\":\"55\",\"chapter_id\":\"3\",\"chapter_title\":\"Chapter 3\",\"verse_id\":\"10\",\"verse_text\":\"``The axe is already laid at the root of the trees; therefore every tree that does not bear good fruit is cut down and thrown into the fire. \\n\\t\\t\\t\",\"paragraph_number\":\"3\"},{\"book_name\":\"Matthew\",\"book_id\":\"Matt\",\"book_order\":\"55\",\"chapter_id\":\"3\",\"chapter_title\":\"Chapter 3\",\"verse_id\":\"11\",\"verse_text\":\"``As for me, I baptize you with water for repentance, but He who is coming after me is mightier than I, and I am not fit to remove His sandals; He will baptize you with the Holy Spirit and fire. \\n\\t\\t\\t\",\"paragraph_number\":\"3\"},{\"book_name\":\"Matthew\",\"book_id\":\"Matt\",\"book_order\":\"55\",\"chapter_id\":\"3\",\"chapter_title\":\"Chapter 3\",\"verse_id\":\"12\",\"verse_text\":\"``His winnowing fork is in His hand, and He will thoroughly clear His threshing floor; and He will gather His wheat into the barn, but He will burn up the chaff with unquenchable fire.\\\" \\n\\t\\t\\t\",\"paragraph_number\":\"3\"},{\"book_name\":\"Matthew\",\"book_id\":\"Matt\",\"book_order\":\"55\",\"chapter_id\":\"3\",\"chapter_title\":\"Chapter 3\",\"verse_id\":\"13\",\"verse_text\":\"Then Jesus arrived from Galilee at the Jordan coming to John, to be baptized by him. \\n\\t\\t\\t\",\"paragraph_number\":\"3\"},{\"book_name\":\"Matthew\",\"book_id\":\"Matt\",\"book_order\":\"55\",\"chapter_id\":\"3\",\"chapter_title\":\"Chapter 3\",\"verse_id\":\"14\",\"verse_text\":\"But John tried to prevent Him, saying, ``I have need to be baptized by You, and do You come to me?\\\" \\n\\t\\t\\t\",\"paragraph_number\":\"3\"},{\"book_name\":\"Matthew\",\"book_id\":\"Matt\",\"book_order\":\"55\",\"chapter_id\":\"3\",\"chapter_title\":\"Chapter 3\",\"verse_id\":\"15\",\"verse_text\":\"But Jesus answering said to him, ``Permit it at this time; for in this way it is fitting for us to fulfill all righteousness.\\\" Then he permitted Him. \\n\\t\\t\\t\",\"paragraph_number\":\"3\"},{\"book_name\":\"Matthew\",\"book_id\":\"Matt\",\"book_order\":\"55\",\"chapter_id\":\"3\",\"chapter_title\":\"Chapter 3\",\"verse_id\":\"16\",\"verse_text\":\"After being baptized, Jesus came up immediately from the water; and behold, the heavens were opened, and he saw the Spirit of God descending as a dove and lighting on Him, \\n\\t\\t\\t\",\"paragraph_number\":\"3\"},{\"book_name\":\"Matthew\",\"book_id\":\"Matt\",\"book_order\":\"55\",\"chapter_id\":\"3\",\"chapter_title\":\"Chapter 3\",\"verse_id\":\"17\",\"verse_text\":\"and behold, a voice out of the heavens said, ``This is My beloved Son, in whom I am well-pleased.\\\" \\n\\t\\t\\n\\t\\t\",\"paragraph_number\":\"3\"}]",
+      "body": "[{\"Title\":\"Resource Not Found\"},{\"Message\":\"The API version requested is not currently supported.\"}]",
       "headers": {
         "Accept-Ranges": "bytes",
         "Access-Control-Allow-Headers": "X-Requested-With",
         "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
         "Access-Control-Allow-Origin": "*",
-        "Age": "0",
+        "Age": "1",
         "Cache-Control": "max-age=3600, must-revalidate",
-        "Content-Type": "application/json",
-        "Date": "Thu, 03 Jan 2019 02:54:43 GMT",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Date": "Thu, 03 Jan 2019 03:36:35 GMT",
         "Server": "Apache/2.2.29 (Amazon)",
         "Via": "1.1 varnish",
         "X-Powered-By": "PHP/5.3.29",
-        "X-Varnish": "613549158",
-        "Content-Length": "4961",
+        "X-Varnish": "2707732186 2707732110",
+        "Content-Length": "100",
         "Connection": "keep-alive"
       },
-      "status_code": 200,
+      "status_code": 404,
       "type": "ok"
     }
   }

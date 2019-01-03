@@ -6,11 +6,11 @@
       "method": "get",
       "options": [],
       "request_body": "",
-      "url": "https://dbt.io/library/bookorder?key=3188c9402ac3c065c4da74dcdf8f6f18&reply=json&v=2"
+      "url": "https://dbt.io/library/bookorder"
     },
     "response": {
       "binary": false,
-      "body": "[{\"Title\":\"Resource Invalid (improperly formatted request)\"},{\"Error\":[\"Missing or invalid DAM ID\"]}]",
+      "body": "[{\"Title\":\"Resource Not Found\"},{\"Message\":\"The API version requested is not currently supported.\"}]",
       "headers": {
         "Accept-Ranges": "bytes",
         "Access-Control-Allow-Headers": "X-Requested-With",
@@ -19,15 +19,15 @@
         "Age": "0",
         "Cache-Control": "max-age=3600, must-revalidate",
         "Content-Type": "text/html; charset=UTF-8",
-        "Date": "Wed, 02 Jan 2019 02:38:49 GMT",
+        "Date": "Thu, 03 Jan 2019 03:36:31 GMT",
         "Server": "Apache/2.2.29 (Amazon)",
         "Via": "1.1 varnish",
         "X-Powered-By": "PHP/5.3.29",
-        "X-Varnish": "2701498145",
-        "Content-Length": "101",
+        "X-Varnish": "613745853",
+        "Content-Length": "100",
         "Connection": "keep-alive"
       },
-      "status_code": 400,
+      "status_code": 404,
       "type": "ok"
     }
   }
