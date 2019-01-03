@@ -2,7 +2,6 @@ defmodule DigitalBibleVolumeTest do
   use ExUnit.Case, async: true
   use ExVCR.Mock, adapter: ExVCR.Adapter.Hackney
 
-
   setup_all do
     use_cassette "volume_list" do
       result = DigitalBible.volumes()
@@ -33,5 +32,4 @@ defmodule DigitalBibleVolumeTest do
              volume_name: "DOOR International Burundi Sign Language"
            }
   end
-
 end

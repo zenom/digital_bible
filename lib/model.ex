@@ -12,6 +12,7 @@ defmodule DigitalBible.Model.Book do
             dam_id: nil,
             number_of_chapters: nil,
             chapters: nil
+
   @type t :: %__MODULE__{}
 end
 
@@ -41,6 +42,7 @@ defmodule DigitalBible.Model.Verse do
             verse_id: nil,
             verse_text: nil,
             paragraph_number: nil
+
   @type t :: %__MODULE__{}
 end
 
@@ -64,5 +66,6 @@ defmodule DigitalBible.Model.Volume do
             language_name: nil,
             delivery: [],
             version_code: nil
+
   @type t :: %__MODULE__{}
 end

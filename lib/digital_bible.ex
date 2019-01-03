@@ -1,6 +1,4 @@
 defmodule DigitalBible do
-  # use HTTPoison.Base
-
   @moduledoc """
   Documentation for DigitalBible.
   """
@@ -61,7 +59,8 @@ defmodule DigitalBible do
       iex> length(verse)
       1
   """
-  defdelegate verse(chapter \\ %DigitalBible.Model.Chapter{}, verse_id), to: DigitalBible.Api.Verse
+  defdelegate verse(chapter \\ %DigitalBible.Model.Chapter{}, verse_id),
+    to: DigitalBible.Api.Verse
 
   @doc """
   Get volumes the API supports

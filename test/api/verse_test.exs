@@ -49,7 +49,13 @@ defmodule DigitalBibleVerseTest do
     ExVCR.Config.filter_sensitive_data("key=.+&", "key=YOURKEY")
 
     use_cassette "verse_list" do
-      result = DigitalBible.verses(%DigitalBible.Model.Chapter{dam_id: "ENGNASO2ET", book_id: "Gen", chapter_id: "1"})
+      result =
+        DigitalBible.verses(%DigitalBible.Model.Chapter{
+          dam_id: "ENGNASO2ET",
+          book_id: "Gen",
+          chapter_id: "1"
+        })
+
       {:ok, verse_list: result}
     end
   end
