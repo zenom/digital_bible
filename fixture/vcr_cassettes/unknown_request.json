@@ -19,11 +19,11 @@
         "Age": "0",
         "Cache-Control": "max-age=3600, must-revalidate",
         "Content-Type": "text/html; charset=UTF-8",
-        "Date": "Wed, 02 Jan 2019 02:38:49 GMT",
+        "Date": "Thu, 03 Jan 2019 22:59:26 GMT",
         "Server": "Apache/2.2.29 (Amazon)",
         "Via": "1.1 varnish",
         "X-Powered-By": "PHP/5.3.29",
-        "X-Varnish": "2701498145",
+        "X-Varnish": "2712706631",
         "Content-Length": "101",
         "Connection": "keep-alive"
       },

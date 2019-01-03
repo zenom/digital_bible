@@ -29,3 +29,4 @@ use Mix.Config
 #
 #     import_config "#{Mix.env()}.exs"
 config :digital_bible, api_key: System.get_env("DBP_API_KEY"), api_version: 2
+config :tesla, adapter: Tesla.Adapter.Hackney

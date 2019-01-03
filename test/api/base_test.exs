@@ -4,7 +4,7 @@ defmodule DigitalBibleBaseTest do
 
   setup_all do
     ExVCR.Config.filter_sensitive_data("key=.+&", "key=YOURKEY")
-    HTTPoison.start()
+    :ok
   end
 
   describe "convert_to_models" do

@@ -5,7 +5,6 @@ defmodule DigitalBible.MixProject do
     [
       app: :digital_bible,
       version: "0.1.0",
-      # elixir: "~> 1.7",
       elixir: ">= 1.4.5",
       description: description(),
       package: package(),
@@ -31,7 +30,8 @@ defmodule DigitalBible.MixProject do
   defp deps do
     [
       {:jason, "~> 1.1"},
-      {:httpoison, "~> 1.5"},
+      {:tesla, "~> 1.2.1"},
+      {:hackney, "~> 1.14.0"},
       {:ex_doc, "~> 0.19.2", only: :dev},
       {:mix_test_watch, "~> 0.8", only: :dev, runtime: false},
       {:exvcr, "~> 0.10", only: :test},
