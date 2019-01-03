@@ -31,7 +31,6 @@ defmodule DigitalBibleChapterTest do
 
   defp build_default_list(_) do
     ExVCR.Config.filter_sensitive_data("key=.+&", "key=YOURKEY")
-    HTTPoison.start()
 
     use_cassette "chapter_list" do
       result = DigitalBible.chapters(%{dam_id: "ENGNASO2ET", book_id: "Gen"})
@@ -42,7 +41,6 @@ defmodule DigitalBibleChapterTest do
   defp build_list_with_book(_) do
     book = %DigitalBible.Model.Book{book_id: "Matt", dam_id: "ENGNASN2ET"}
     ExVCR.Config.filter_sensitive_data("key=.+&", "key=YOURKEY")
-    HTTPoison.start()
 
     use_cassette "chapter_list_with_book" do
       result = DigitalBible.chapters(book)
