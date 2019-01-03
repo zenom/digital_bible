@@ -6,11 +6,11 @@
       "method": "get",
       "options": [],
       "request_body": "",
-      "url": "https://dbt.io/library/bad_url"
+      "url": "https://dbt.io/library/bad_url?key=3188c9402ac3c065c4da74dcdf8f6f18&reply=json&v=2"
     },
     "response": {
       "binary": false,
-      "body": "[{\"Title\":\"Resource Not Found\"},{\"Message\":\"The API version requested is not currently supported.\"}]",
+      "body": "[{\"Title\":\"Resource Not Found\"},{\"Message\":\"library\\/bad_url for API v 2 is unavailable.\"}]",
       "headers": {
         "Accept-Ranges": "bytes",
         "Access-Control-Allow-Headers": "X-Requested-With",
@@ -19,12 +19,12 @@
         "Age": "0",
         "Cache-Control": "max-age=3600, must-revalidate",
         "Content-Type": "text/html; charset=UTF-8",
-        "Date": "Thu, 03 Jan 2019 03:36:32 GMT",
+        "Date": "Thu, 03 Jan 2019 22:59:26 GMT",
         "Server": "Apache/2.2.29 (Amazon)",
         "Via": "1.1 varnish",
         "X-Powered-By": "PHP/5.3.29",
-        "X-Varnish": "2707731912",
-        "Content-Length": "100",
+        "X-Varnish": "2712706556",
+        "Content-Length": "91",
         "Connection": "keep-alive"
       },
       "status_code": 404,

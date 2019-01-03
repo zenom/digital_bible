@@ -6,8 +6,8 @@ defmodule DigitalBible.Api.Base do
   @doc false
   def request(url, params, expected_fields) do
     client()
-    |> Tesla.get(base_url() <> url,
-      params:
+    |> Tesla.get(url,
+      query:
         Map.merge(
           %{
             key: Application.get_env(:digital_bible, :api_key),
@@ -48,9 +48,9 @@ defmodule DigitalBible.Api.Base do
     {:error, "ERROR: #{status_code}"}
   end
 
-  defp parse({:error, %HTTPoison.Error{reason: reason}}, _) do
-    IO.puts(reason)
-  end
+  # defp parse({:error, %HTTPoison.Error{reason: reason}}, _) do
+  #   IO.puts(reason)
+  # end
 
   defp string_keys_to_atoms(item) do
     for {key, val} <- item, into: %{} do
