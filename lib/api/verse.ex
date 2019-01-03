@@ -11,15 +11,15 @@ defmodule DigitalBible.Api.Verse do
 
   @default_params %{}
 
-  def verse(%Model.Chapter{dam_id: dam_id, book_id: book_id, chapter_id: chapter_id}) do
+  def verse(%Model.Chapter{dam_id: dam_id, book_id: book_id, chapter_id: chapter_id}, verse_id) do
     @default_params
-    |> Map.merge(%{dam_id: dam_id, book_id: book_id, chapter_id: chapter_id})
+    |> Map.merge(%{dam_id: dam_id, book_id: book_id, chapter_id: chapter_id, verse_id: verse_id})
     |> make_request
   end
 
-  def verses(options \\ %{}) do
+  def verses(%Model.Chapter{dam_id: dam_id, book_id: book_id, chapter_id: chapter_id}) do
     @default_params
-    |> Map.merge(options)
+    |> Map.merge(%{dam_id: dam_id, book_id: book_id, chapter_id: chapter_id})
     |> make_request
   end
 

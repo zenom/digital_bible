@@ -1,6 +1,5 @@
 defmodule DigitalBibleTest do
-  #use ExUnit.Case, async: true
-  #use ExVCR.Mock, adapter: ExVCR.Adapter.Hackney
+  use ExUnit.Case, async: true
 
   #doctest DigitalBible
 end

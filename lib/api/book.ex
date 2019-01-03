@@ -11,27 +11,12 @@ defmodule DigitalBible.Api.Book do
 
   @default_params %{}
 
-  @doc """
-  Get the list of books by passing in a Volume
-
-  ## EXAMPLES
-    iex> DigitalBible.books(%DigitalBible.Model.Volume{dam_id: <DAMID>})
-    iex> []
-  """
-
   def books(%Model.Volume{dam_id: dam_id}) do
     @default_params
     |> Map.merge(%{dam_id: dam_id})
     |> make_request
   end
 
-  @doc """
-  Get the list of books
-
-  ## EXAMPLES
-    iex> DigitalBible.books
-    []
-  """
   def books(options) do
     @default_params
     |> Map.merge(options)

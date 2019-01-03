@@ -32,5 +32,4 @@ defmodule DigitalBible.Api.Chapter do
   defp url do
     "/library/chapter"
   end
-
 end

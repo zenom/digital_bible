@@ -6,7 +6,7 @@
       "method": "get",
       "options": [],
       "request_body": "",
-      "url": "https://dbt.io/text/verse?book_id=Matt&chapter_id=3&dam_id=ENGNASN2ET&key=YOURKEYv=2"
+      "url": "https://dbt.io/text/verse?book_id=Matt&chapter_id=3&dam_id=ENGNASN2ET&key=YOURKEYverse_id=1"
     },
     "response": {
       "binary": false,
@@ -16,14 +16,14 @@
         "Access-Control-Allow-Headers": "X-Requested-With",
         "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
         "Access-Control-Allow-Origin": "*",
-        "Age": "140",
+        "Age": "0",
         "Cache-Control": "max-age=3600, must-revalidate",
         "Content-Type": "application/json",
-        "Date": "Wed, 02 Jan 2019 02:07:22 GMT",
+        "Date": "Thu, 03 Jan 2019 02:54:43 GMT",
         "Server": "Apache/2.2.29 (Amazon)",
         "Via": "1.1 varnish",
         "X-Powered-By": "PHP/5.3.29",
-        "X-Varnish": "2701383362 2701374237",
+        "X-Varnish": "613549158",
         "Content-Length": "4961",
         "Connection": "keep-alive"
       },

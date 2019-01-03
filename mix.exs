@@ -11,7 +11,12 @@ defmodule DigitalBible.MixProject do
       package: package(),
       deps: deps(),
       test_coverage: [tool: ExCoveralls],
-      preferred_cli_env: [coveralls: :test, "coveralls.detail": :test, "coveralls.post": :test, "coveralls.html": :test]
+      preferred_cli_env: [
+        coveralls: :test,
+        "coveralls.detail": :test,
+        "coveralls.post": :test,
+        "coveralls.html": :test
+      ]
     ]
   end
 
@@ -42,8 +47,10 @@ defmodule DigitalBible.MixProject do
   end
 
   defp package do
-    [ maintainers: ["zenom"],
+    [
+      maintainers: ["zenom"],
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/zenom/digital_bible"} ]
+      links: %{"GitHub" => "https://github.com/zenom/digital_bible"}
+    ]
   end
 end
