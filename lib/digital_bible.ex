@@ -46,7 +46,7 @@ defmodule DigitalBible do
       iex> length(verses)
       25
   """
-  defdelegate verses(options \\ %DigitalBible.Model.Chapter{}), to: DigitalBible.Api.Verse
+  defdelegate verses(chapter \\ %DigitalBible.Model.Chapter{}), to: DigitalBible.Api.Verse
 
   @doc """
   Get verses for a `DigitalBook.Model.Chapter` and a `verse_id`
@@ -61,7 +61,7 @@ defmodule DigitalBible do
       iex> length(verse)
       1
   """
-  defdelegate verse(options \\ %DigitalBible.Model.Chapter{}, verse_id), to: DigitalBible.Api.Verse
+  defdelegate verse(chapter \\ %DigitalBible.Model.Chapter{}, verse_id), to: DigitalBible.Api.Verse
 
   @doc """
   Get volumes the API supports
